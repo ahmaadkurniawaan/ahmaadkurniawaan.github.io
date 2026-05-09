@@ -1,0 +1,130 @@
+---
+---
+
+<section id="tentang" class="about section">
+  <div class="container">
+    <h2 class="section-title">Tentang Saya</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p>
+          Saya adalah seorang <strong>Full-Stack Web Developer</strong> dan <strong>Product Manager</strong> 
+          yang bersemangat dalam membangun solusi digital inovatif. Dengan pengalaman lebih dari 5 tahun 
+          di bidang pengembangan web, saya telah mengerjakan berbagai project mulai dari sistem informasi 
+          rumah sakit, platform pendidikan, hingga e-commerce.
+        </p>
+        <p>
+          Saat ini saya menjabat sebagai <strong>Co-Founder & COO</strong> di CV. Sumber Solusi Bersama, 
+          di mana saya mengelola operasional perusahaan dan memimpin tim pengembangan produk digital. 
+          Saya percaya bahwa teknologi dapat menjadi solusi untuk berbagai permasalahan di masyarakat.
+        </p>
+        <div class="about-info">
+          <div class="info-item">
+            <span class="info-label">Lokasi</span>
+            <span class="info-value">Surakarta, Jawa Tengah, Indonesia</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Fokus</span>
+            <span class="info-value">Web Development, Product Management</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-social">
+        <h3>Terhubung dengan saya</h3>
+        <div class="social-links">
+          <a href="https://linkedin.com/in/ahmaadkurniawaan" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Ahmad Kurniawan" class="social-link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/ahmaadkurniawaan" target="_blank" rel="noopener noreferrer" aria-label="GitHub Ahmad Kurniawan" class="social-link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            GitHub
+          </a>
+          <a href="https://instagram.com/ahmaadkurniawaan" target="_blank" rel="noopener noreferrer" aria-label="Instagram Ahmad Kurniawan" class="social-link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            Instagram
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: var(--space-3xl);
+    align-items: start;
+  }
+
+  .about-text p {
+    margin-bottom: var(--space-lg);
+    font-size: 1.05rem;
+  }
+
+  .about-info {
+    margin-top: var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .info-item {
+    display: flex;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    border: 3px solid var(--color-black);
+    background: var(--color-gray);
+  }
+
+  .info-label {
+    font-weight: 800;
+    min-width: 80px;
+    color: var(--color-blue);
+  }
+
+  .info-value {
+    font-weight: 600;
+  }
+
+  .about-social {
+    padding: var(--space-xl);
+    border: var(--border-width) solid var(--color-black);
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--color-black);
+    background: var(--color-white);
+  }
+
+  .about-social h3 {
+    margin-bottom: var(--space-lg);
+    font-size: 1.1rem;
+  }
+
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .social-link {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    border: 3px solid var(--color-black);
+    font-weight: 700;
+    transition: all var(--transition-fast);
+  }
+
+  .social-link:hover {
+    background: var(--color-blue);
+    color: var(--color-white);
+    transform: translate(2px, 2px);
+  }
+
+  @media (max-width: 767px) {
+    .about-content {
+      grid-template-columns: 1fr;
+      gap: var(--space-xl);
+    }
+  }
+</style>

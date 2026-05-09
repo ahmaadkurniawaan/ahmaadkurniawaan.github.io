@@ -1,0 +1,9 @@
+{
+  "title": "Sistem Informasi LP3AK",
+  "description": "Sistem Informasi Manajemen LP3AK",
+  "category": "Corporate",
+  "image": "/assets/project/lp3ak.png",
+  "link": "https://lp3ak.com",
+  "technologies": ["Laravel", "MySQL"],
+  "year": 2022
+}

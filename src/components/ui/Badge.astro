@@ -1,0 +1,73 @@
+---
+interface Props {
+  icon: string;
+  name: string;
+  description?: string;
+}
+
+const { icon, name, description } = Astro.props;
+---
+
+<div class="badge-card">
+  <div class="badge-icon">
+    <img src={icon} alt={name} loading="lazy" width="48" height="48">
+  </div>
+  <span class="badge-name">{name}</span>
+  {description && <p class="badge-description">{description}</p>}
+</div>
+
+<style>
+  .badge-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-lg);
+    border: 3px solid var(--color-black);
+    background: var(--color-white);
+    text-align: center;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    box-shadow: var(--shadow-offset-sm) var(--shadow-offset-sm) 0 var(--color-black);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .badge-card:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--color-black);
+    border-color: var(--color-blue);
+  }
+
+  .badge-card:hover .badge-description {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .badge-icon img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+  }
+
+  .badge-name {
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+
+  .badge-description {
+    font-size: 0.8rem;
+    color: var(--color-gray-dark);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all var(--transition-normal);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--color-blue);
+    color: var(--color-white);
+    padding: var(--space-sm) var(--space-md);
+    margin: 0;
+    font-weight: 600;
+  }
+</style>

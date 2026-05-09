@@ -1,0 +1,90 @@
+---
+import { getCollection } from 'astro:content';
+import ProjectCard from './ui/ProjectCard.astro';
+
+const projects = await getCollection('projects');
+const categories = [...new Set(projects.map(p => p.data.category))].sort();
+---
+
+<section id="project" class="projects section">
+  <div class="container">
+    <h2 class="section-title">Project Portfolio</h2>
+    <div class="project-filters" role="toolbar" aria-label="Filter project berdasarkan kategori">
+      <button class="filter-btn active" data-filter="all">Semua</button>
+      {categories.map((cat) => (
+        <button class="filter-btn" data-filter={cat}>{cat}</button>
+      ))}
+    </div>
+    <div class="projects-grid">
+      {projects.map((project) => (
+        <ProjectCard project={project} />
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .project-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    justify-content: center;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--space-xl);
+  }
+
+  @media (max-width: 767px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .project-filters {
+      gap: var(--space-sm);
+    }
+
+    .filter-btn {
+      font-size: 0.8rem;
+      padding: 8px 14px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .projects-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .projects-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>
+
+<script>
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const projectCards = document.querySelectorAll('.project-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter;
+
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      projectCards.forEach(card => {
+        const category = card.dataset.category;
+        if (filter === 'all' || category === filter) {
+          (card as HTMLElement).style.display = 'block';
+        } else {
+          (card as HTMLElement).style.display = 'none';
+        }
+      });
+    });
+  });
+</script>

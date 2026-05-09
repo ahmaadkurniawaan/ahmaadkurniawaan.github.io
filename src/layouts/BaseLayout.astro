@@ -1,0 +1,75 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+}
+
+const { title, description, ogImage = '/assets/ahmad-profile.png' } = Astro.props;
+const siteUrl = 'https://ahmaadkurniawaan.github.io';
+---
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  <meta name="author" content="Ahmad Kurniawan">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content={siteUrl}>
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:image" content={`${siteUrl}${ogImage}`}>
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content={title}>
+  <meta name="twitter:description" content={description}>
+  <meta name="twitter:image" content={`${siteUrl}${ogImage}`}>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ahmad Kurniawan",
+    "url": siteUrl,
+    "jobTitle": "Co-Founder & COO",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "CV. Sumber Solusi Bersama"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Surakarta",
+      "addressRegion": "Jawa Tengah",
+      "addressCountry": "ID"
+    },
+    "sameAs": [
+      "https://linkedin.com/in/ahmaadkurniawaan",
+      "https://github.com/ahmaadkurniawaan",
+      "https://instagram.com/ahmaadkurniawaan"
+    ]
+  })} />
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Langsung ke konten utama</a>
+  <slot />
+</body>
+</html>
+
+<style is:global>
+  @import '../styles/global.css';
+  @import '../styles/neobrutalism.css';
+</style>

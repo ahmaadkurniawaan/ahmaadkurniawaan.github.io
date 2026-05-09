@@ -1,0 +1,9 @@
+{
+  "title": "Media Pembelajaran Fisika",
+  "description": "Website Media Pembelajaran Fisika interaktif untuk siswa",
+  "category": "Education",
+  "image": "/assets/project/fisika.png",
+  "link": "https://youtu.be/aqd2XXxZzDY",
+  "technologies": ["CodeIgniter", "MySQL"],
+  "year": 2020
+}

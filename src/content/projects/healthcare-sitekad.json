@@ -1,0 +1,9 @@
+{
+  "title": "Sitekad - Platform Difabel",
+  "description": "Aplikasi Penghubung Pencari dan Penyedia Pekerjaan Khusus Difabel Berbasis Web App",
+  "category": "Healthcare",
+  "image": "/assets/project/sitekad.png",
+  "link": "https://sitekad.sehatidifabel.id/",
+  "technologies": ["Laravel", "MySQL"],
+  "year": 2023
+}

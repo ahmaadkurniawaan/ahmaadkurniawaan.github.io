@@ -1,0 +1,9 @@
+{
+  "title": "Pemilihan BEM IIQ An-Nur",
+  "description": "Website Pemilihan BEM IIQ An-Nur Yogyakarta",
+  "category": "Education",
+  "image": "/assets/project/iiqannur.png",
+  "link": "https://ormawaiiqannur.com",
+  "technologies": ["Laravel", "MySQL"],
+  "year": 2021
+}

@@ -1,0 +1,9 @@
+{
+  "title": "Lokal Palm Sugar",
+  "description": "Website Landing Page Lokal Palm Sugar",
+  "category": "E-Commerce",
+  "image": "/assets/project/palm.png",
+  "link": "https://lokalpalmsugar.com",
+  "technologies": ["HTML", "CSS", "JavaScript"],
+  "year": 2021
+}

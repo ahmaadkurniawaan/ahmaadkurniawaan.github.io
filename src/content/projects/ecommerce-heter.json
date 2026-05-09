@@ -1,0 +1,9 @@
+{
+  "title": "E-Commerce Hewan Ternak",
+  "description": "Web E-Commerce Project untuk jual beli Hewan Ternak",
+  "category": "E-Commerce",
+  "image": "/assets/project/heter.png",
+  "link": "https://hewanternak.com",
+  "technologies": ["Laravel", "Vue.js", "MySQL"],
+  "year": 2021
+}

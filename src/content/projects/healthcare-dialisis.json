@@ -1,0 +1,9 @@
+{
+  "title": "Aplikasi Kesehatan Dialisis",
+  "description": "Aplikasi Kesehatan Dialisis Berbasis Web App untuk monitoring pasien",
+  "category": "Healthcare",
+  "image": "/assets/project/dialisis.png",
+  "link": "https://klikdialisis.com/",
+  "technologies": ["Laravel", "Vue.js", "MySQL"],
+  "year": 2023
+}

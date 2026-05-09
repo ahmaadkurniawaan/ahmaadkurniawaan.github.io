@@ -1,0 +1,9 @@
+{
+  "title": "Prodi Manajemen UMP",
+  "description": "Website Program Studi Manajemen Universitas Muhammadiyah Purworejo",
+  "category": "Education",
+  "image": "/assets/project/manajemen.png",
+  "link": "http://manajemen.umpwr.ac.id/",
+  "technologies": ["CodeIgniter", "MySQL"],
+  "year": 2021
+}

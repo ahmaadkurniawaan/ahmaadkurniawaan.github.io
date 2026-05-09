@@ -1,0 +1,9 @@
+{
+  "title": "Booking Pendaftaran Online RSUD",
+  "description": "Aplikasi Booking Pendaftaran Online RSUD Berbasis Web App",
+  "category": "Healthcare",
+  "image": "/assets/project/antrol.png",
+  "link": "https://pendaftaran.rsudbungkarno.surakarta.go.id/",
+  "technologies": ["Laravel", "MySQL"],
+  "year": 2023
+}

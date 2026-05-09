@@ -1,0 +1,9 @@
+{
+  "title": "UMKM Madu Wonotopo",
+  "description": "Landing Page UMKM Madu Wonotopo",
+  "category": "E-Commerce",
+  "image": "/assets/project/umkm.png",
+  "link": "https://maduwonotopo.store",
+  "technologies": ["HTML", "CSS", "JavaScript"],
+  "year": 2021
+}

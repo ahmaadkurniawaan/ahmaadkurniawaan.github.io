@@ -1,0 +1,9 @@
+{
+  "title": "Prodi PGSD UMP",
+  "description": "Website Program Studi PGSD Universitas Muhammadiyah Purworejo",
+  "category": "Education",
+  "image": "/assets/project/pgsd.png",
+  "link": "https://pgsd.umpwr.ac.id/",
+  "technologies": ["CodeIgniter", "MySQL"],
+  "year": 2021
+}

@@ -1,0 +1,104 @@
+---
+import { getCollection } from 'astro:content';
+
+const certsData = await getCollection('certifications');
+const certifications = certsData[0].data;
+---
+
+<section id="sertifikasi" class="certifications section">
+  <div class="container">
+    <h2 class="section-title">Sertifikasi</h2>
+    <div class="certifications-grid">
+      {certifications.map((cert) => (
+        <div class="cert-card">
+          <div class="cert-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="8" r="7"/>
+              <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+            </svg>
+          </div>
+          <div class="cert-info">
+            <h3>{cert.name}</h3>
+            <p class="cert-issuer">{cert.issuer}</p>
+            {cert.date && <span class="cert-date">{cert.date}</span>}
+          </div>
+          {cert.verificationLink && (
+            <a href={cert.verificationLink} target="_blank" rel="noopener noreferrer" class="cert-verify">
+              Verifikasi →
+            </a>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--space-lg);
+  }
+
+  .cert-card {
+    padding: var(--space-lg);
+    border: var(--border-width) solid var(--color-black);
+    background: var(--color-white);
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--color-black);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .cert-card:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 4px 4px 0 var(--color-black);
+  }
+
+  .cert-icon {
+    color: var(--color-blue);
+  }
+
+  .cert-info h3 {
+    font-size: 1rem;
+    margin-bottom: var(--space-xs);
+  }
+
+  .cert-issuer {
+    font-size: 0.9rem;
+    color: var(--color-gray-dark);
+    font-weight: 600;
+  }
+
+  .cert-date {
+    display: inline-block;
+    margin-top: var(--space-xs);
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border: 2px solid var(--color-black);
+    background: var(--color-gray);
+  }
+
+  .cert-verify {
+    margin-top: auto;
+    font-weight: 700;
+    color: var(--color-blue);
+    border-bottom: 3px solid var(--color-blue);
+    align-self: flex-start;
+    padding-bottom: 2px;
+    transition: color var(--transition-fast);
+  }
+
+  .cert-verify:hover {
+    color: var(--color-black);
+    border-color: var(--color-black);
+  }
+
+  @media (max-width: 767px) {
+    .certifications-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

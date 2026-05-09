@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import Hero from '../components/Hero.astro';
+
+import Experience from '../components/Experience.astro';
+import Projects from '../components/Projects.astro';
+import Skills from '../components/Skills.astro';
+import Certifications from '../components/Certifications.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout 
+  title="Ahmad Kurniawan - Co-Founder & COO | Full-Stack Web Developer"
+  description="Portfolio Ahmad Kurniawan, Co-Founder & COO di CV. Sumber Solusi Bersama. Full-Stack Web Developer & Product Manager berbasis di Surakarta, Jawa Tengah."
+>
+  <Navigation />
+  <main id="main-content">
+    <Hero />
+    <Experience />
+    <Projects />
+    <Skills />
+    <Certifications />
+    <Contact />
+  </main>
+  <Footer />
+</BaseLayout>
+
+<script>
+  // Scroll reveal animation
+  const revealElements = document.querySelectorAll('.section');
+  
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    revealElements.forEach(el => {
+      el.classList.add('reveal');
+      observer.observe(el);
+    });
+  } else {
+    revealElements.forEach(el => el.classList.add('visible'));
+  }
+</script>

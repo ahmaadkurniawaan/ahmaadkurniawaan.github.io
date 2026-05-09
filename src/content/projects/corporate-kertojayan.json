@@ -1,0 +1,9 @@
+{
+  "title": "Desa Kertojayan",
+  "description": "Website Resmi Desa Kertojayan Grabag Purworejo",
+  "category": "Corporate",
+  "image": "/assets/project/kertojayan.png",
+  "link": "http://desakertojayangrabag.com/",
+  "technologies": ["Laravel", "MySQL"],
+  "year": 2021
+}

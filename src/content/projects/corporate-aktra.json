@@ -1,0 +1,9 @@
+{
+  "title": "Aktra Teknologi Indonesia",
+  "description": "Website Company Profile Aktra Teknologi Indonesia",
+  "category": "Corporate",
+  "image": "/assets/project/aktra.png",
+  "link": "https://aktra.id",
+  "technologies": ["Vue.js", "Laravel"],
+  "year": 2022
+}

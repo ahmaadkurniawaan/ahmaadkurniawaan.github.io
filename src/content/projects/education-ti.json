@@ -1,0 +1,9 @@
+{
+  "title": "Prodi Teknologi Informasi UMP",
+  "description": "Website Program Studi Teknologi Informasi Universitas Muhammadiyah Purworejo",
+  "category": "Education",
+  "image": "/assets/project/ti.png",
+  "link": "http://ti.umpwr.ac.id/",
+  "technologies": ["CodeIgniter", "MySQL"],
+  "year": 2021
+}

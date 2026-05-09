@@ -1,0 +1,179 @@
+---
+const navItems = [
+  { href: '#home', label: 'Home' },
+  { href: '#pengalaman', label: 'Pengalaman' },
+  { href: '#project', label: 'Project' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#sertifikasi', label: 'Sertifikasi' },
+  { href: '#kontak', label: 'Kontak' },
+];
+---
+
+<nav class="navigation" aria-label="Navigasi utama">
+  <div class="nav-container">
+    <a href="#home" class="nav-logo" aria-label="Kembali ke atas">AK</a>
+    <ul class="nav-menu" role="menubar">
+      {navItems.map((item) => (
+        <li role="none">
+          <a href={item.href} role="menuitem">{item.label}</a>
+        </li>
+      ))}
+    </ul>
+    <button class="nav-toggle" aria-label="Buka menu navigasi" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<style>
+  .navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--color-white);
+    border-bottom: var(--border-width) solid var(--color-black);
+    z-index: 1000;
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-lg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--color-black);
+    border: var(--border-width) solid var(--color-black);
+    padding: 6px 14px;
+    background: var(--color-blue);
+    color: var(--color-white);
+    box-shadow: 3px 3px 0 var(--color-black);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  }
+
+  .nav-logo:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0 var(--color-black);
+  }
+
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+  }
+
+  .nav-menu a {
+    padding: 8px 14px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border: 2px solid transparent;
+    transition: all var(--transition-fast);
+  }
+
+  .nav-menu a:hover {
+    border-color: var(--color-black);
+    background: var(--color-blue);
+    color: var(--color-white);
+  }
+
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 8px;
+    border: 3px solid var(--color-black);
+    background: var(--color-white);
+  }
+
+  .nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background: var(--color-black);
+    transition: all var(--transition-fast);
+  }
+
+  .nav-toggle[aria-expanded="true"] span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+
+  .nav-toggle[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle[aria-expanded="true"] span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+  }
+
+  @media (max-width: 767px) {
+    .nav-toggle {
+      display: flex;
+    }
+
+    .nav-menu {
+      position: fixed;
+      top: var(--nav-height);
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--color-white);
+      flex-direction: column;
+      justify-content: center;
+      gap: var(--space-md);
+      border-top: var(--border-width) solid var(--color-black);
+      transform: translateX(100%);
+      transition: transform var(--transition-normal);
+    }
+
+    .nav-menu.open {
+      transform: translateX(0);
+    }
+
+    .nav-menu a {
+      font-size: 1.25rem;
+      padding: 12px 24px;
+    }
+  }
+</style>
+
+<script>
+  const navToggle = document.querySelector('.nav-toggle');
+  const navMenu = document.querySelector('.nav-menu');
+  const navLinks = document.querySelectorAll('.nav-menu a');
+
+  if (navToggle && navMenu) {
+    navToggle.addEventListener('click', () => {
+      const isOpen = navMenu.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+      navToggle.setAttribute('aria-label', isOpen ? 'Tutup menu navigasi' : 'Buka menu navigasi');
+    });
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'Buka menu navigasi');
+      });
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navMenu.classList.contains('open')) {
+        navMenu.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.focus();
+      }
+    });
+  }
+</script>

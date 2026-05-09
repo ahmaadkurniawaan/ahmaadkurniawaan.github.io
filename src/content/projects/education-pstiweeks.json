@@ -1,0 +1,9 @@
+{
+  "title": "PSTI WEEKS Event",
+  "description": "Website Event PSTI WEEKS Program Studi Teknologi Informasi",
+  "category": "Education",
+  "image": "/assets/project/pstiweeks.png",
+  "link": "https://pstiweeks.vercel.app/",
+  "technologies": ["HTML", "CSS", "JavaScript"],
+  "year": 2021
+}

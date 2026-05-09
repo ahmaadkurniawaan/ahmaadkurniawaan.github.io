@@ -1,0 +1,176 @@
+---
+import { getCollection } from 'astro:content';
+
+const experiencesData = await getCollection('experiences');
+const experiences = experiencesData[0].data;
+---
+
+<section id="pengalaman" class="experience section">
+  <div class="container">
+    <h2 class="section-title">Pengalaman Kerja</h2>
+    <div class="timeline">
+      {experiences.map((exp, index) => (
+        <div class={`timeline-item ${exp.current ? 'current' : ''}`}>
+          <div class="timeline-marker">
+            <div class="marker-dot"></div>
+          </div>
+          <div class="timeline-content">
+            {exp.logo && (
+              <div class="timeline-logo">
+                <img src={exp.logo} alt={`Logo ${exp.company}`} loading="lazy" width="40" height="40">
+              </div>
+            )}
+            <div class="timeline-info">
+              <h3>{exp.position}</h3>
+              <p class="company">{exp.company}</p>
+              <div class="timeline-meta">
+                <span class="period">{exp.period}</span>
+                <span class="location">{exp.location}</span>
+              </div>
+              {exp.description && <p class="description">{exp.description}</p>}
+              {exp.current && <span class="current-badge">Saat Ini</span>}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .timeline {
+    position: relative;
+    padding-left: var(--space-xl);
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--color-black);
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: var(--space-xl);
+    padding-left: var(--space-xl);
+  }
+
+  .timeline-marker {
+    position: absolute;
+    left: -20px;
+    top: 8px;
+  }
+
+  .marker-dot {
+    width: 20px;
+    height: 20px;
+    border: 4px solid var(--color-black);
+    background: var(--color-white);
+    border-radius: 0;
+  }
+
+  .timeline-item.current .marker-dot {
+    background: var(--color-blue);
+    box-shadow: 0 0 0 4px var(--color-white), 0 0 0 6px var(--color-blue);
+  }
+
+  .timeline-content {
+    display: flex;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    border: var(--border-width) solid var(--color-black);
+    background: var(--color-white);
+    box-shadow: var(--shadow-offset-sm) var(--shadow-offset-sm) 0 var(--color-black);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  }
+
+  .timeline-content:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--color-black);
+  }
+
+  .timeline-item.current .timeline-content {
+    border-color: var(--color-blue);
+    box-shadow: var(--shadow-offset-sm) var(--shadow-offset-sm) 0 var(--color-blue);
+  }
+
+  .timeline-logo {
+    flex-shrink: 0;
+  }
+
+  .timeline-logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border: 2px solid var(--color-black);
+    padding: 4px;
+  }
+
+  .timeline-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: var(--space-xs);
+  }
+
+  .company {
+    font-weight: 600;
+    color: var(--color-gray-dark);
+    margin-bottom: var(--space-sm);
+  }
+
+  .timeline-meta {
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-sm);
+  }
+
+  .period, .location {
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border: 2px solid var(--color-black);
+    background: var(--color-gray);
+  }
+
+  .description {
+    font-size: 0.9rem;
+    color: var(--color-gray-dark);
+    margin-top: var(--space-sm);
+  }
+
+  .current-badge {
+    display: inline-block;
+    margin-top: var(--space-sm);
+    padding: 4px 12px;
+    background: var(--color-blue);
+    color: var(--color-white);
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    border: 2px solid var(--color-black);
+  }
+
+  @media (max-width: 767px) {
+    .timeline {
+      padding-left: var(--space-md);
+    }
+
+    .timeline-item {
+      padding-left: var(--space-lg);
+    }
+
+    .timeline-content {
+      flex-direction: column;
+      padding: var(--space-md);
+    }
+
+    .timeline-meta {
+      flex-direction: column;
+      gap: var(--space-xs);
+    }
+  }
+</style>

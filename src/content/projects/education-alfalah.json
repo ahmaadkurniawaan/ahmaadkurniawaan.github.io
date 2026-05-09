@@ -1,0 +1,9 @@
+{
+  "title": "Pondok Pesantren Al-Falah",
+  "description": "Website Pondok Pesantren Al-Falah Krui, Pesisir Barat, Lampung",
+  "category": "Education",
+  "image": "/assets/project/alfalahkrui.png",
+  "link": "https://alfalahkrui.com",
+  "technologies": ["Laravel", "MySQL"],
+  "year": 2021
+}

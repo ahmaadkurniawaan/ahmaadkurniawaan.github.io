@@ -1,0 +1,9 @@
+{
+  "title": "SIMRS Bunda Kandangan",
+  "description": "Sistem Informasi Manajemen Rumah Sakit (SIMRS) Bunda Kandangan",
+  "category": "Healthcare",
+  "image": "/assets/project/rsbk.png",
+  "link": "https://rsbundakandangan.com",
+  "technologies": ["Laravel", "Vue.js", "MySQL"],
+  "year": 2022
+}

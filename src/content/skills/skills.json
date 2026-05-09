@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Laravel",
+    "category": "programming",
+    "icon": "/assets/laravel.png",
+    "description": "5+ tahun pengalaman membangun web applications dengan Laravel",
+    "proficiency": "expert"
+  },
+  {
+    "name": "Vue.js",
+    "category": "programming",
+    "icon": "/assets/vue.png",
+    "description": "Frontend framework untuk interactive UIs dan SPA",
+    "proficiency": "advanced"
+  },
+  {
+    "name": "CodeIgniter",
+    "category": "programming",
+    "icon": "/assets/ci.png",
+    "description": "Framework PHP untuk pengembangan web cepat dan ringan",
+    "proficiency": "advanced"
+  },
+  {
+    "name": "Java",
+    "category": "programming",
+    "icon": "/assets/java.png",
+    "description": "Pengembangan aplikasi desktop dan sistem pendukung keputusan",
+    "proficiency": "intermediate"
+  },
+  {
+    "name": "Python",
+    "category": "programming",
+    "icon": "/assets/python.png",
+    "description": "Scripting, automation, dan machine learning dasar",
+    "proficiency": "intermediate"
+  },
+  {
+    "name": "UI/UX Design",
+    "category": "design",
+    "icon": "/assets/uiux.png",
+    "description": "Mendesain user interface dan user experience yang intuitif",
+    "proficiency": "advanced"
+  },
+  {
+    "name": "Project Management",
+    "category": "management",
+    "icon": "/assets/handwriting.png",
+    "description": "Mengelola tim dan project delivery dari planning hingga deployment",
+    "proficiency": "advanced"
+  },
+  {
+    "name": "Product Management",
+    "category": "management",
+    "icon": "/assets/handwriting.png",
+    "description": "Mengelola roadmap produk dan koordinasi stakeholder",
+    "proficiency": "advanced"
+  },
+  {
+    "name": "Git & GitHub",
+    "category": "programming",
+    "icon": "/assets/git.png",
+    "description": "Version control dan kolaborasi tim development",
+    "proficiency": "advanced"
+  },
+  {
+    "name": "Cloud Computing",
+    "category": "programming",
+    "icon": "/assets/bangkit.png",
+    "description": "Deployment dan manajemen aplikasi di cloud platform",
+    "proficiency": "intermediate"
+  },
+  {
+    "name": "AI & Machine Learning",
+    "category": "ai",
+    "icon": "/assets/python.png",
+    "description": "Implementasi AI untuk solusi bisnis dan produk digital",
+    "proficiency": "intermediate"
+  },
+  {
+    "name": "Automation",
+    "category": "ai",
+    "icon": "/assets/git.png",
+    "description": "Otomasi workflow, CI/CD, dan proses bisnis",
+    "proficiency": "advanced"
+  }
+]

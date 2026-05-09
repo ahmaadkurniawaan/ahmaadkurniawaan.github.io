@@ -1,0 +1,76 @@
+---
+import { getCollection } from 'astro:content';
+import Badge from './ui/Badge.astro';
+
+const skillsData = await getCollection('skills');
+const skills = skillsData[0].data;
+
+const groupedSkills = {
+  programming: skills.filter(s => s.category === 'programming'),
+  ai: skills.filter(s => s.category === 'ai'),
+  management: skills.filter(s => s.category === 'management'),
+  design: skills.filter(s => s.category === 'design'),
+};
+
+const categoryLabels: Record<string, string> = {
+  programming: 'Programming & Tools',
+  ai: 'AI & Automation',
+  management: 'Management',
+  design: 'Design',
+};
+---
+
+<section id="skills" class="skills section">
+  <div class="container">
+    <h2 class="section-title">Skills & Tools</h2>
+    {Object.entries(groupedSkills).map(([category, items]) => (
+      items.length > 0 && (
+        <div class="skills-group">
+          <h3 class="skills-category">{categoryLabels[category]}</h3>
+          <div class="skills-grid">
+            {items.map((skill) => (
+              <Badge icon={skill.icon} name={skill.name} description={skill.description} />
+            ))}
+          </div>
+        </div>
+      )
+    ))}
+  </div>
+</section>
+
+<style>
+  .skills-group {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .skills-category {
+    margin-bottom: var(--space-lg);
+    padding: var(--space-sm) var(--space-md);
+    border-left: var(--border-width-thick) solid var(--color-blue);
+    font-size: 1.2rem;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: var(--space-md);
+  }
+
+  @media (max-width: 767px) {
+    .skills-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .skills-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .skills-grid {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+</style>

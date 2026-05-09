@@ -1,0 +1,9 @@
+{
+  "title": "Prodi Hukum UMP",
+  "description": "Website Program Studi Hukum Universitas Muhammadiyah Purworejo",
+  "category": "Education",
+  "image": "/assets/project/hukum.png",
+  "link": "http://hukum.umpwr.ac.id",
+  "technologies": ["CodeIgniter", "MySQL"],
+  "year": 2021
+}

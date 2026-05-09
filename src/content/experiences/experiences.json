@@ -1,0 +1,96 @@
+[
+  {
+    "position": "Co-Founder & COO",
+    "company": "CV. Sumber Solusi Bersama",
+    "period": "2023 - Sekarang",
+    "location": "Surakarta, Jawa Tengah",
+    "current": true,
+    "description": "Mengelola operasional perusahaan dan pengembangan produk digital"
+  },
+  {
+    "position": "Project Manager & Fullstack Web Developer",
+    "company": "PT. Aktra Teknologi Indonesia",
+    "period": "Jan 2022 - 2023",
+    "location": "Purworejo, Indonesia",
+    "logo": "/assets/aktra.png",
+    "current": false,
+    "description": "Memimpin tim pengembangan dan mengelola project web development"
+  },
+  {
+    "position": "Cloud Computing Student",
+    "company": "Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka",
+    "period": "Feb 2021 - Jul 2021",
+    "location": "Jakarta Raya, Indonesia",
+    "logo": "/assets/bangkit.png",
+    "current": false,
+    "description": "Mempelajari cloud computing dan pengembangan aplikasi berbasis cloud"
+  },
+  {
+    "position": "Web Developer",
+    "company": "AK Project",
+    "period": "Sep 2020 - Des 2021",
+    "location": "Purworejo, Jawa Tengah",
+    "logo": "/assets/akproject.png",
+    "current": false,
+    "description": "Mengembangkan website untuk berbagai klien"
+  },
+  {
+    "position": "Project Intern",
+    "company": "PPTIK Universitas Muhammadiyah Purworejo",
+    "period": "Nov 2020 - Jan 2021",
+    "location": "Purworejo, Jawa Tengah",
+    "logo": "/assets/ump.png",
+    "current": false,
+    "description": "Magang pengembangan sistem informasi kampus"
+  },
+  {
+    "position": "Freelance Web Developer",
+    "company": "Freelance",
+    "period": "2020 - 2022",
+    "location": "Remote",
+    "current": false,
+    "description": "Mengerjakan project website untuk berbagai klien secara freelance"
+  },
+  {
+    "position": "UI/UX Designer",
+    "company": "Freelance",
+    "period": "2020 - 2021",
+    "location": "Remote",
+    "current": false,
+    "description": "Mendesain user interface dan user experience untuk aplikasi web"
+  },
+  {
+    "position": "Product Manager",
+    "company": "CV. Sumber Solusi Bersama",
+    "period": "2023 - Sekarang",
+    "location": "Surakarta, Jawa Tengah",
+    "current": true,
+    "description": "Mengelola roadmap produk dan koordinasi tim development"
+  },
+  {
+    "position": "Mentor Web Development",
+    "company": "Community",
+    "period": "2021 - 2022",
+    "location": "Online",
+    "current": false,
+    "description": "Membimbing mahasiswa dalam pengembangan web"
+  },
+  {
+    "position": "Full-Stack Developer",
+    "company": "PT. Aktra Teknologi Indonesia",
+    "period": "2022 - 2023",
+    "location": "Purworejo, Indonesia",
+    "logo": "/assets/aktra.png",
+    "current": false,
+    "description": "Mengembangkan aplikasi web full-stack untuk klien enterprise"
+  },
+  {
+    "position": "Mahasiswa Teknologi Informasi",
+    "company": "Universitas Muhammadiyah Purworejo",
+    "period": "2019 - 2023",
+    "location": "Purworejo, Jawa Tengah",
+    "logo": "/assets/ump.png",
+    "current": false,
+    "description": "Menempuh pendidikan S1 Teknologi Informasi"
+  }
+]
